@@ -1,13 +1,18 @@
-//---------------------------------------------------------------------------
-
-#pragma hdrstop
-
-//---------------------------------------------------------------------------
-
-#pragma argsused
-int main(int argc, char* argv[])
+#include <iostream>
+#include <strstream>
+using namespace std;
+int main()
 {
-  return 0;
-}
-//---------------------------------------------------------------------------
- 
+    char w[100];
+     printf("Vvedi stroku:"); gets(w);
+    istrstream is(w);
+    char s[100];
+    while(is>>s)
+    {
+        int L=strlen(s);
+        char t=s[1];
+        s[1]=s[L-1];
+        s[L-1]=t;
+        cout<<s<<' ';
+    }
+    
