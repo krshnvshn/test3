@@ -15,4 +15,7 @@ int main()
         s[L-1]=t;
         cout<<s<<' ';
     }
-    
+             cout<<endl;
+    system("pause");
+    return 0;
+}
