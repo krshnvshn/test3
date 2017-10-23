@@ -1,12 +1,22 @@
 #include <iostream>
 #include <strstream>
+#include <fstream>
+
 using namespace std;
+
 int main()
+
 {
     char w[100];
      printf("Vvedi stroku:"); gets(w);
+     for(int i=0;w[i];i++)
+  if(ispunct(w[i]))
+     w[i]=' ';
+
+
     istrstream is(w);
     char s[100];
+
     while(is>>s)
     {
         int L=strlen(s);
